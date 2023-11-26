@@ -259,3 +259,7 @@ piggyUpgrade.addEventListener("click", function () {
 // bill upgrade
 // billModal.style.display = "flex"; // DELETE
 // backgroundBlur.style.display = ""; // DELETE
+
+// testing
+interval.dollarPerSecond();
+interval.piggyPerSecond();
