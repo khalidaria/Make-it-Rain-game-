@@ -1,3 +1,6 @@
 # Make-it-Rain-game-
 
-Insipred by 'Make it Rain' mobile game.
+Duplicate of 'Make it Rain' mobile game.
+
+*Testing my HTML CSS and Javascript skills
+*All the code written by me, not copied
