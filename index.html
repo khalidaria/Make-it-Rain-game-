@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Make it Rain</title>
+  </head>
+  <body>
+    <!-- main layout -->
+    <div class="grid-layout">
+      <div class="total-money-on-screen">
+        <p class="dollar-sign">$</p>
+        <p class="digit">0</p>
+      </div>
+      <p class="dollar-per-second"><strong>$1</strong>&nbsp;/second</p>
+      <div class="dollar-outline">
+        <div class="inner-outline">
+          <div class="inner-middle">
+            <div class="corner-circles">
+              <div class="top-circles">
+                <div class="circle circle-left"></div>
+                <div class="circle circle-right"></div>
+              </div>
+              <div class="bottom-circles">
+                <div class="circle circle-left"></div>
+                <div class="circle circle-right"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dollar-band band-0"></div>
+        <div class="dollar-band band-1"></div>
+        <p class="current-dollar-bill">$1</p>
+      </div>
+
+      <!-- background blur for icon modals -->
+      <div class="blur"></div>
+
+      <!-- piggy modal -->
+      <div class="piggy-modal hidden upgrade-modals">
+        <div class="piggy-money-on-screen">
+          <p class="piggy-total-money">$0</p>
+          <p class="tap-to-collect">tap to collect</p>
+        </div>
+        <div class="piggy-footer">
+          <div class="current-piggy-upgrades">
+            <p class="piggy-dollar-hour">$50 <span>/hour</span></p>
+            <p class="piggy-capacity">$30 <span>capacity</span></p>
+            <p class="piggy-upgrade-0"></p>
+            <p class="piggy-upgrade-1"></p>
+          </div>
+          <button class="piggy-upgrade-button">UPGRADE PIGGY BANK</button>
+        </div>
+      </div>
+      <div class="dollar-modal"></div>
+      <div class="per-second-modal"></div>
+      <div class="reset-modal"></div>
+    </div>
+
+    <!-- bill modal -->
+    <div class="bill-modal hidden upgrade-modals"></div>
+    <!-- upgrade icons-->
+    <footer>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+        class="piggy-bank-upgrade icon"
+      >
+        <path
+          d="M226,88.08c-.4-1-.82-2-1.25-3a87.93,87.93,0,0,0-30.17-37H216a8,8,0,0,0,0-16H112a88.12,88.12,0,0,0-87.72,81A32,32,0,0,0,0,144a8,8,0,0,0,16,0,16,16,0,0,1,8.57-14.16A87.69,87.69,0,0,0,46,178.22l12.56,35.16A16,16,0,0,0,73.64,224H86.36a16,16,0,0,0,15.07-10.62l1.92-5.38h57.3l1.92,5.38A16,16,0,0,0,177.64,224h12.72a16,16,0,0,0,15.07-10.62L221.64,168H224a24,24,0,0,0,24-24V112A24,24,0,0,0,226,88.08ZM152,72H112a8,8,0,0,1,0-16h40a8,8,0,0,1,0,16Zm28,56a12,12,0,1,1,12-12A12,12,0,0,1,180,128Z"
+        ></path>
+      </svg>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+        class="dollar-upgrade icon"
+      >
+        <path
+          d="M168,128a40,40,0,1,1-40-40A40,40,0,0,1,168,128Zm80-64V192a8,8,0,0,1-8,8H16a8,8,0,0,1-8-8V64a8,8,0,0,1,8-8H240A8,8,0,0,1,248,64Zm-16,46.35A56.78,56.78,0,0,1,193.65,72H62.35A56.78,56.78,0,0,1,24,110.35v35.3A56.78,56.78,0,0,1,62.35,184h131.3A56.78,56.78,0,0,1,232,145.65Z"
+        ></path>
+      </svg>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+        class="per-second-upgrade icon"
+      >
+        <path
+          d="M128.09,57.38a36,36,0,0,1,55.17-27.82,4,4,0,0,1-.56,7A52.06,52.06,0,0,0,152,84c0,1.17,0,2.34.12,3.49a4,4,0,0,1-6,3.76A36,36,0,0,1,128.09,57.38ZM240,160.61a24.47,24.47,0,0,1-13.6,22l-.44.2-38.83,16.54a6.94,6.94,0,0,1-1.19.4l-64,16A7.93,7.93,0,0,1,120,216H16A16,16,0,0,1,0,200V160a16,16,0,0,1,16-16H44.69l22.62-22.63A31.82,31.82,0,0,1,89.94,112H140a28,28,0,0,1,27.25,34.45l41.84-9.62A24.61,24.61,0,0,1,240,160.61Zm-16,0a8.61,8.61,0,0,0-10.87-8.3l-.31.08-67,15.41a8.32,8.32,0,0,1-1.79.2H112a8,8,0,0,1,0-16h28a12,12,0,0,0,0-24H89.94a15.86,15.86,0,0,0-11.31,4.69L56,155.31V200h63l62.43-15.61,38-16.18A8.56,8.56,0,0,0,224,160.61ZM168,84a36,36,0,1,0,36-36A36,36,0,0,0,168,84Z"
+        ></path>
+      </svg>
+
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="#000000"
+        viewBox="0 0 256 256"
+        class="reset icon"
+      >
+        <path
+          d="M232,88.86V56a16,16,0,0,0-16-16H40A16,16,0,0,0,24,56V184a16,16,0,0,0,16,16H152v24a8,8,0,0,0,11.58,7.16L192,216.94l28.42,14.22A8,8,0,0,0,232,224V167.14a55.87,55.87,0,0,0,0-78.28ZM128,144H72a8,8,0,0,1,0-16h56a8,8,0,0,1,0,16Zm0-32H72a8,8,0,0,1,0-16h56a8,8,0,0,1,0,16Zm88,99.06-20.42-10.22a8,8,0,0,0-7.16,0L168,211.06V178.59a55.94,55.94,0,0,0,48,0ZM192,168a40,40,0,1,1,40-40A40,40,0,0,1,192,168Z"
+        ></path>
+      </svg>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
